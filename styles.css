@@ -649,8 +649,7 @@ img { max-width: 100%; }
   transform: translateX(6px);
 }
 
-.project-card:hover { border-color: rgba(45,212,191,.5); }
-.program-card:hover { border-color: rgba(201,168,76,.5); }
+.clinical-card:hover { border-color: rgba(45,212,191,.5); }
 
 .tc-header {
   display: flex;
