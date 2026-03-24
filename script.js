@@ -4,31 +4,26 @@
 
 'use strict';
 
-/* ── Navbar Scroll Effect ── */
-const navbar = document.getElementById('navbar');
+/* ── Sidebar Scroll Effect ── */
+const sidebar = document.getElementById('sidebar');
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 const navLinkItems = navLinks.querySelectorAll('a');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
   updateActiveNavLink();
 });
 
 /* ── Mobile Menu Toggle ── */
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
-  navLinks.classList.toggle('open');
+  sidebar.classList.toggle('open');
 });
 
 navLinkItems.forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
-    navLinks.classList.remove('open');
+    sidebar.classList.remove('open');
   });
 });
 
