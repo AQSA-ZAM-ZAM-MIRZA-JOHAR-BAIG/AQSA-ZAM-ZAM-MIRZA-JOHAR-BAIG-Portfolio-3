@@ -20,6 +20,12 @@
   --white:        #ffffff;
   --card-bg:      #16181d;
   --card-border:  rgba(255,255,255,.08);
+  --cream:        #f8f4ec;
+  --cream-dark:   #e2d9c8;
+  --dark:         #08090c;
+  --dark-2:       #16181d;
+  --teal:         #2dd4bf;
+  --teal-dim:     rgba(45,212,191,.12);
   --section-gap:  140px;
   --radius-sm:    8px;
   --radius:       20px;
@@ -619,7 +625,7 @@ img { max-width: 100%; }
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #6b7280;
   margin-bottom: 6px;
 }
 
@@ -627,7 +633,7 @@ img { max-width: 100%; }
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--asphalt);
 }
 
 /* ========================================================= */
@@ -812,7 +818,7 @@ img { max-width: 100%; }
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--asphalt);
   margin-bottom: 8px;
 }
 
@@ -943,17 +949,18 @@ img { max-width: 100%; }
 }
 
 .skill-block {
-  background: var(--white);
+  background: rgba(255,255,255,.04);
   border-radius: var(--radius);
   padding: 32px 28px;
-  border: 1px solid var(--card-border);
+  border: 1px solid rgba(255,255,255,.08);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .skill-block:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+  border-color: rgba(212,175,55,.3);
 }
 
 .skill-icon { font-size: 2rem; margin-bottom: 16px; }
@@ -962,22 +969,22 @@ img { max-width: 100%; }
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--white);
   margin-bottom: 12px;
 }
 
 .skill-block p {
   font-size: .88rem;
-  color: var(--text-muted);
+  color: rgba(255,255,255,.55);
   line-height: 1.7;
   margin-bottom: 20px;
 }
 
-.skill-block p strong { color: var(--text-primary); }
+.skill-block p strong { color: var(--white); }
 
 .skill-bar {
   height: 4px;
-  background: var(--cream-dark);
+  background: rgba(255,255,255,.1);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -996,7 +1003,17 @@ img { max-width: 100%; }
 /*  CONTACT                                                   */
 /* ========================================================= */
 .contact-section {
-  background: linear-gradient(135deg, var(--cream) 0%, #f0ebe0 100%);
+  background: var(--asphalt);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(212,175,55,.06) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .contact-layout {
@@ -1008,7 +1025,7 @@ img { max-width: 100%; }
 
 .contact-lead {
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: rgba(255,255,255,.55);
   line-height: 1.8;
   margin-bottom: 40px;
 }
@@ -1020,19 +1037,18 @@ img { max-width: 100%; }
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  background: var(--white);
+  background: rgba(255,255,255,.04);
   border-radius: var(--radius);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255,255,255,.08);
   text-decoration: none;
   color: inherit;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
 .contact-item:hover {
   transform: translateX(6px);
-  box-shadow: var(--shadow);
-  border-color: var(--gold);
+  background: rgba(255,255,255,.07);
+  border-color: rgba(212,175,55,.4);
 }
 
 .ci-icon { font-size: 1.5rem; flex-shrink: 0; }
@@ -1043,7 +1059,7 @@ img { max-width: 100%; }
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--gold);
   margin-bottom: 2px;
 }
 
@@ -1051,16 +1067,18 @@ img { max-width: 100%; }
   display: block;
   font-size: .9rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: rgba(255,255,255,.8);
 }
 
 /* Contact Form */
 .contact-form {
-  background: var(--white);
+  background: rgba(255,255,255,.05);
   border-radius: var(--radius-lg);
   padding: 40px 36px;
-  border: 1px solid var(--card-border);
+  border: 1px solid rgba(255,255,255,.1);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .form-group {
@@ -1072,7 +1090,7 @@ img { max-width: 100%; }
   font-size: .8rem;
   font-weight: 600;
   letter-spacing: .05em;
-  color: var(--text-primary);
+  color: rgba(255,255,255,.75);
   margin-bottom: 8px;
 }
 
@@ -1082,19 +1100,25 @@ img { max-width: 100%; }
   padding: 13px 16px;
   font-family: 'Inter', sans-serif;
   font-size: .9rem;
-  color: var(--text-primary);
-  background: var(--cream);
-  border: 1.5px solid var(--cream-dark);
+  color: var(--white);
+  background: rgba(255,255,255,.06);
+  border: 1.5px solid rgba(255,255,255,.12);
   border-radius: var(--radius-sm);
   outline: none;
   resize: vertical;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255,255,255,.3);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
+  background: rgba(255,255,255,.09);
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+  box-shadow: 0 0 0 3px rgba(212,175,55,.15);
 }
 
 .form-note {
@@ -1102,15 +1126,16 @@ img { max-width: 100%; }
   font-size: .82rem;
   text-align: center;
   min-height: 20px;
-  color: var(--text-muted);
+  color: rgba(255,255,255,.5);
 }
 
 /* ========================================================= */
 /*  FOOTER                                                    */
 /* ========================================================= */
 .footer {
-  background: var(--dark);
+  background: #08090c;
   padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,.05);
 }
 
 .footer-inner {
