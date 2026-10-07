@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aqsa-zam-zam-mirza-johar-baig-portf.vercel.app/sitemap.xml
+Sitemap: https://aqsa-zam-zam-mirza-johar-baig-portfolio-3.vercel.app/sitemap.xml
