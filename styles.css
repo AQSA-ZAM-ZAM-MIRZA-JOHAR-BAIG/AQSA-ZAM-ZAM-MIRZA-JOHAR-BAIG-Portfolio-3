@@ -901,7 +901,7 @@ img { max-width: 100%; }
 .ach-bronze { border-color: rgba(217,119,87,.2); }
 .ach-bronze::before { background: rgba(217,119,87,.04); }
 
-.ach-clat, .ach-ailet {
+.ach-law, .ach-ailet {
   border-color: rgba(45,212,191,.2);
   background: rgba(45,212,191,.03);
 }
@@ -922,7 +922,7 @@ img { max-width: 100%; }
 .ach-gold   .ach-ribbon { background: rgba(37,99,235,.15); color: var(--gold-light); }
 .ach-silver .ach-ribbon { background: rgba(148,163,184,.12); color: #cbd5e1; }
 .ach-bronze .ach-ribbon { background: rgba(217,119,87,.12); color: #fca07d; }
-.ach-clat   .ach-ribbon,
+.ach-law    .ach-ribbon,
 .ach-ailet  .ach-ribbon { background: var(--teal-dim); color: var(--teal); }
 
 .ach-card h3 {
